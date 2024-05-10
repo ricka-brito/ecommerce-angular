@@ -1,0 +1,53 @@
+<div class="flex transition-all gap-x-3">
+  <button
+    (click)="changeSelected('men')"
+    class="p-[9px] border-black border-4 rounded-full drop-shadow-[2px_2px_0_#000000] flex items-center justify-center transition-all "
+    [ngClass]="{ 'bg-purple': selected.men, 'bg-white': !selected.men}"
+  >
+    <img
+      src="../../../assets/icons/man.png"
+      class="size-[30px]"
+      [ngClass]="{ ' ml-2 ': selected.men }"
+    />
+    <p
+      class="font-semibold text-[20px] mr-2 flex justify-center items-center"
+      *ngIf="selected.men"
+    >
+      MEN
+    </p>
+  </button>
+  <button
+    (click)="changeSelected('woman')"
+    class="p-[9px] border-black border-4 rounded-full drop-shadow-[2px_2px_0_#000000] flex items-center justify-center transition-all "
+    [ngClass]="{ 'bg-purple': selected.woman, 'bg-white': !selected.woman }"
+  >
+    <img
+      src="../../../assets/icons/woman.png"
+      class="size-[30px]"
+      [ngClass]="{ ' ml-2 ': selected.woman }"
+    />
+    <p
+      class="font-semibold text-[20px] mr-2 flex justify-center items-center"
+      *ngIf="selected.woman"
+    >
+      WOMEN
+    </p>
+  </button>
+  <button
+    (click)="changeSelected('kid')"
+    class="p-[9px] border-black border-4 rounded-full drop-shadow-[2px_2px_0_#000000] flex items-center justify-center transition-all   "
+    [ngClass]="{ 'bg-purple': selected.kid, 'bg-white': !selected.kid }"
+  >
+    <img
+      src="../../../assets/icons/child.png"
+      class="size-[30px]"
+      [ngClass]="{ ' ml-2 ': selected.kid }"
+    />
+    <p
+      class="font-semibold text-[20px] mr-2 flex justify-center items-center"
+      *ngIf="selected.kid"
+    >
+      KIDS
+    </p>
+  </button>
+</div>
